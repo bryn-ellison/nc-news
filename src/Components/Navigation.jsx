@@ -14,7 +14,7 @@ export const Navigation = () => {
     return (
         <nav className="navigation-container">
                 {navBar.map((navItem, index) => {
-                    return <Link key={`${navItem.slug}-${index}`} className="navigation-item" to={`/topics/${navItem.slug}`}>{navItem.slug}</Link>
+                    return <Link key={`${navItem.slug}-${index}`} className="navigation-item" to={`/topics/${navItem.slug}`}>{navItem.slug.toUpperCase()}</Link>
                 })}
         </nav>
     )

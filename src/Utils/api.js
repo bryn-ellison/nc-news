@@ -9,3 +9,9 @@ export const fetchNav = () => {
     return data.topics;
   });
 };
+
+export const fetchArticles = () => {
+  return myApi.get("/articles").then(({ data }) => {
+    return data.articles;
+  });
+};
