@@ -4,13 +4,16 @@ import { timeDate } from "../Utils/timeDate"
 
 export const Articles = () => {
     const [articles, setArticles] = useState([])
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         fetchArticles().then((articlesFromApi) => {
             setArticles(articlesFromApi)
+            setIsLoading(false)
         })
     }, [])
 
+    if (isLoading) return <p>Loading articles...</p>
     return (
         <main className="article-container">
             <p>Your articles, USERNAME</p>

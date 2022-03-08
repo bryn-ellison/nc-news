@@ -8,6 +8,10 @@
 
 .navigation-container {
   margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-basis: auto;
+  flex-wrap: wrap;
 }
 
 .navigation-item {
@@ -31,10 +35,12 @@
 
 .article-list-item {
   list-style: none;
-  flex: 0 1 80%;
   margin: 1rem;
   padding: 1rem;
   border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 500px));
+  justify-content: center;
 }
 
 .article-title {
@@ -42,7 +48,5 @@
 }
 
 .article-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   text-align: left;
 }
