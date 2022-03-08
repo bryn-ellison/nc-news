@@ -20,7 +20,7 @@
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   color: #7a59e4;
   font-weight: 800;
 }
@@ -67,6 +67,9 @@ h1 {
   text-align: left;
   background-color: #aad1d6;
   padding: 1rem;
+  color: #7a59e4;
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
 .article-info {

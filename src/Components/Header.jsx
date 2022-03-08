@@ -7,7 +7,7 @@ export const Header = () => {
 
     return (
         <header className="header-container">
-            <h1 className="header-title">NC-News</h1>
+            <h1 className="header-title">NC News</h1>
             <p className="header-login">{UsernameContext._currentValue} is signed in</p>
         </header>
     )
