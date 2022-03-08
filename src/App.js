@@ -15,6 +15,7 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/" element={<Articles />} />
+            <Route path="/topics/:topic_slug" element={<Articles />} />
           </Routes>
         </div>
       </BrowserRouter>

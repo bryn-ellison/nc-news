@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Manrope", sans-serif;
 }
 
 .header-container {
@@ -48,5 +49,27 @@
 }
 
 .article-info {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 200px 300px;
+  gap: 1rem;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.article-info dt {
   text-align: left;
+  padding-top: 1rem;
+}
+
+@media (max-width: 650px) {
+  .article-info {
+    display: block;
+  }
+}
+
+#article-list-image {
+  max-width: 100%;
+  height: auto;
 }

@@ -10,8 +10,14 @@ export const fetchNav = () => {
   });
 };
 
-export const fetchArticles = () => {
-  return myApi.get("/articles").then(({ data }) => {
-    return data.articles;
-  });
+export const fetchArticles = (topic_slug) => {
+  return myApi
+    .get("/articles", {
+      params: {
+        topic: topic_slug,
+      },
+    })
+    .then(({ data }) => {
+      return data.articles;
+    });
 };
