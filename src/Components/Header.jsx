@@ -1,9 +1,9 @@
 import { UsernameContext } from "../Contexts/UsernameContext";
-import { useContext } from "react";
+// import { useContext } from "react";
 
 export const Header = () => {
 
-    const { username, setUsername } = useContext(UsernameContext);
+    // const { username, setUsername } = useContext(UsernameContext);
 
     return (
         <header className="header-container">

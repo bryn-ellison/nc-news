@@ -1,32 +1,36 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import { fetchArticles } from "../Utils/api"
 import { timeDate } from "../Utils/timeDate"
 
 export const Articles = () => {
     const [articles, setArticles] = useState([])
     const [isLoading, setIsLoading] = useState(true);
+    const { topic_slug } = useParams()
 
     useEffect(() => {
-        fetchArticles().then((articlesFromApi) => {
+        fetchArticles(topic_slug).then((articlesFromApi) => {
             setArticles(articlesFromApi)
             setIsLoading(false)
         })
-    }, [])
+    }, [topic_slug])
 
     if (isLoading) return <p>Loading articles...</p>
     return (
         <main className="article-container">
-            <p>Your articles, USERNAME</p>
             <ul className="article-list">
                 {articles.map((article, index) => {
                     return <li key={article.article_id} className="article-list-item">
                         <h3 className="article-title">{article.title}</h3>
-                        <div className="article-info">   
-                            <h5>Written by: {article.author}</h5>
-                            <h5>Posted on: {timeDate(article.created_at)}</h5>
-                            <h5>{article.topic.toUpperCase()}</h5>
-                            <h5>Number of votes: {article.votes}</h5>
-                        </div>
+                        <dl className="article-info">
+                            <img id="article-list-image" src={"https://picsum.photos/200?random=" + Math.floor(Math.random() * 100)} alt={article.title}/>   
+                            <div>
+                            <dt>Written by: {article.author}</dt>
+                            <dt>Posted on: {timeDate(article.created_at)}</dt>
+                            <dt>{article.topic.toUpperCase()}</dt>
+                            <dt>Votes: {article.votes}</dt>
+                            </div>
+                        </dl>
                     </li>
                 })}
             </ul>
