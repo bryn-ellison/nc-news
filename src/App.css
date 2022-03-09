@@ -26,7 +26,7 @@ h1 {
 }
 
 .navigation-container {
-  margin: 1rem;
+  margin: 0.5rem;
   display: flex;
   justify-content: center;
   flex-basis: auto;
@@ -95,5 +95,51 @@ h1 {
 
 #article-list-image {
   max-width: 100%;
+  height: auto;
+}
+
+.single-article-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.single-article-header {
+  background-color: #aad1d6;
+  padding: 1rem;
+  font-size: 2.5rem;
+  text-align: left;
+  color: #7a59e4;
+}
+
+.image-info-contianter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+
+@media (max-width: 650px) {
+  .image-info-contianter {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+dl {
+  padding: 1rem;
+}
+
+.article-text {
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+#article-main-image {
+  padding: 1rem;
+  margin-left: auto;
+  max-width: 90%;
   height: auto;
 }

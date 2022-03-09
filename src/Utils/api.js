@@ -21,3 +21,9 @@ export const fetchArticles = (topic_slug) => {
       return data.articles;
     });
 };
+
+export const fetchSingleArticle = (article_id) => {
+  return myApi.get(`/articles/${article_id}`).then(({ data }) => {
+    return data.article;
+  });
+};

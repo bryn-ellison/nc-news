@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { fetchArticles } from "../Utils/api"
 import { timeDate } from "../Utils/timeDate"
 
@@ -25,11 +25,12 @@ export const Articles = () => {
                         <dl className="article-info">
                             <img id="article-list-image" src={"https://picsum.photos/200?random=" + Math.floor(Math.random() * 100)} alt={article.title}/>   
                             <div>
+                            <dt>{article.topic.toUpperCase()}</dt>
                             <dt>Written by: {article.author}</dt>
                             <dt>Posted on: {timeDate(article.created_at)}</dt>
-                            <dt>{article.topic.toUpperCase()}</dt>
                             <dt>Votes: {article.votes}</dt>
                             </div>
+                            <Link className="article-list-button" to={`/articles/${article.article_id}`}>Read now</Link>
                         </dl>
                     </li>
                 })}
