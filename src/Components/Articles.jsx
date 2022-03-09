@@ -30,7 +30,9 @@ export const Articles = () => {
                             <dt>Posted on: {timeDate(article.created_at)}</dt>
                             <dt>Votes: {article.votes}</dt>
                             </div>
-                            <Link className="article-list-button" to={`/articles/${article.article_id}`}>Read now</Link>
+                            <br></br>
+                            <br></br>
+                            <Link className="navigation-item" to={`/articles/${article.article_id}`}>Read now</Link>
                         </dl>
                     </li>
                 })}
