@@ -101,6 +101,7 @@ h1 {
 .single-article-container {
   max-width: 900px;
   margin: auto;
+  background-color: #aad1d63b;
 }
 
 .single-article-header {
