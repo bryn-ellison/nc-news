@@ -27,3 +27,11 @@ export const fetchSingleArticle = (article_id) => {
     return data.article;
   });
 };
+
+export const patchArticle = (article_id, voteClick) => {
+  return myApi
+    .patch(`/articles/${article_id}`, { inc_votes: voteClick })
+    .then((response) => {
+      return response;
+    });
+};

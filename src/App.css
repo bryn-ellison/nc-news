@@ -11,6 +11,7 @@
 .App {
   text-align: center;
   font-family: "Manrope", sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 .header-container {
@@ -35,9 +36,10 @@ h1 {
 
 .navigation-item {
   margin: 0.5rem;
-  padding: 1rem;
+  padding: 0.7rem;
   background-color: #aad1d6;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  height: 2rem;
 }
 
 .article-container {
@@ -101,6 +103,7 @@ h1 {
 .single-article-container {
   max-width: 900px;
   margin: auto;
+  background-color: #aad1d63b;
 }
 
 .single-article-header {
@@ -128,6 +131,7 @@ h1 {
 
 dl {
   padding: 1rem;
+  letter-spacing: 0.03rem;
 }
 
 .article-text {
@@ -135,6 +139,7 @@ dl {
   padding: 1rem;
   font-size: 1.1rem;
   margin-bottom: 1rem;
+  letter-spacing: 0.03rem;
 }
 
 #article-main-image {

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import { fetchSingleArticle } from "../Utils/api"
 import { timeDate } from "../Utils/timeDate"
+import { Voting } from "./Voting"
 
 export const SingleArticle = () => {
     const [singleArticle, setSingleArticle] = useState([])
@@ -24,6 +25,7 @@ export const SingleArticle = () => {
                 <dt>{singleArticle.topic.toUpperCase()}</dt>
                 <dt>By {singleArticle.author}</dt>
                 <dt>Posted on: {timeDate(singleArticle.created_at)}</dt>
+                <Voting votes={singleArticle.votes} article_id={singleArticle.article_id}/>
             </dl>
             <img id="article-main-image" src={"https://picsum.photos/450/300?random=" + Math.floor(Math.random() * 100)} alt={singleArticle.title}/>
             </div>
