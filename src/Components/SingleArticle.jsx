@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom"
 import { fetchSingleArticle } from "../Utils/api"
 import { timeDate } from "../Utils/timeDate"
 import { Voting } from "./Voting"
+import { Comments } from "./Comments"
 
 export const SingleArticle = () => {
     const [singleArticle, setSingleArticle] = useState([])
@@ -30,6 +31,7 @@ export const SingleArticle = () => {
             <img id="article-main-image" src={"https://picsum.photos/450/300?random=" + Math.floor(Math.random() * 100)} alt={singleArticle.title}/>
             </div>
             <p className="article-text">{singleArticle.body}</p>
+            <Comments article_id={singleArticle.article_id} />
             <Link className="navigation-item" to={`/topics/${singleArticle.topic}`}>Back to {singleArticle.topic.toUpperCase()}</Link>
         </article>
     )

@@ -19,16 +19,12 @@ export const Voting = ({ votes, article_id }) => {
             setDisable(false)
         })
     }
-    if (err) return <><p>{err}</p><section className="voting-module">
-    <p>Votes: {votesCount}</p>
-    <button disabled={disable} onClick={() => handleClick(-1)}><BsFillCaretDownSquareFill /></button>
-    <button disabled={disable} onClick={() => handleClick(1)}><BsFillCaretUpSquareFill /></button>
-    </section></>;
     return (
         <section className="voting-module">
         <p>Votes: {votesCount}</p>
-        <button disabled={disable} onClick={() => handleClick(-1)}><BsFillCaretDownSquareFill /></button>
-        <button disabled={disable} onClick={() => handleClick(1)}><BsFillCaretUpSquareFill /></button>
+        <button className="votes-button" disabled={disable} onClick={() => handleClick(-1)}><BsFillCaretDownSquareFill /></button>
+        <button className="votes-button" disabled={disable} onClick={() => handleClick(1)}><BsFillCaretUpSquareFill /></button>
+        {err? <p>{err}</p>: null}
         </section>
     )
 }

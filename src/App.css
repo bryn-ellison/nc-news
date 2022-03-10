@@ -11,7 +11,7 @@
 .App {
   text-align: center;
   font-family: "Manrope", sans-serif;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.04rem;
 }
 
 .header-container {
@@ -127,6 +127,9 @@ h1 {
     text-align: center;
     margin: auto;
   }
+  .voting-module {
+    margin: auto;
+  }
 }
 
 dl {
@@ -147,4 +150,33 @@ dl {
   margin-left: auto;
   max-width: 90%;
   height: auto;
+}
+
+.comment-info {
+  display: flexbox;
+  text-align: left;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
+.comments-header {
+  color: #7a59e4;
+  background-color: #aad1d6;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.votes-button {
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+}
+
+.voting-module {
+  background-color: #7a59e4;
+  color: #ffffff;
+  text-align: center;
+  max-width: 100px;
+  margin-top: 1rem;
+  padding-top: 00.3rem;
 }
