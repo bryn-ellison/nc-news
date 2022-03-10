@@ -130,6 +130,9 @@ h1 {
   .voting-module {
     margin: auto;
   }
+  .comment-info {
+    display: block;
+  }
 }
 
 dl {
@@ -153,7 +156,7 @@ dl {
 }
 
 .comment-info {
-  display: flexbox;
+  display: flex;
   text-align: left;
   padding: 1rem;
   justify-content: space-evenly;
@@ -179,4 +182,20 @@ dl {
   max-width: 100px;
   margin-top: 1rem;
   padding-top: 00.3rem;
+}
+
+.comment-form {
+  padding: 1rem;
+}
+
+.comment-input {
+  background-color: #ffffff;
+  padding: 0.5rem;
+  margin: 0.3rem;
+}
+
+.comment-submit {
+  background-color: #aad1d6;
+  padding: 0.6rem;
+  font-size: 1.1rem;
 }

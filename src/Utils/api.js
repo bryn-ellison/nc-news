@@ -41,3 +41,8 @@ export const fetchComments = ({ article_id }) => {
     return data.comments;
   });
 };
+
+export const postComment = (articleID, comment) => {
+  console.log(comment);
+  return myApi.post(`/articles/${articleID}/comments`, comment);
+};
