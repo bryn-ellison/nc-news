@@ -10,11 +10,13 @@ export const fetchNav = () => {
   });
 };
 
-export const fetchArticles = (topic_slug) => {
+export const fetchArticles = (topic_slug, params) => {
+  console.log(topic_slug, params);
   return myApi
     .get("/articles", {
       params: {
         topic: topic_slug,
+        sort_by: params,
       },
     })
     .then(({ data }) => {

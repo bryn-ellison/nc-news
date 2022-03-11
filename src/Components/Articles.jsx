@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, } from "react-router-dom"
 import { fetchArticles } from "../Utils/api"
 import { timeDate } from "../Utils/timeDate"
 import { Sorting } from "./Sorting"
@@ -19,7 +19,7 @@ export const Articles = () => {
     if (isLoading) return <p>Loading articles...</p>
     return (
         <main className="article-container">
-            <Sorting />
+            <Sorting topic={topic_slug} setArticles={setArticles}/>
             <ul className="article-list">
                 {articles.map((article, index) => {
                     return <li key={article.article_id} className="article-list-item">
